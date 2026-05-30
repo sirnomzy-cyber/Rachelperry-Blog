@@ -303,12 +303,13 @@ p { font-size: 1rem; color: var(--charcoal-light); }
    HERO SECTION
    ============================================================ */
 #hero {
-  min-height: 100vh;
+  min-height: 88vh;
   position: relative;
   display: flex;
   align-items: center;
   overflow: hidden;
   background: var(--beige);
+  padding: 120px 0 100px;
 }
 .hero-bg {
   position: absolute;
@@ -362,7 +363,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
   position: relative;
   z-index: 2;
   color: white;
-  max-width: 760px;
+  max-width: 620px;
 }
 .hero-tag {
   display: inline-flex;
@@ -411,6 +412,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
   flex-wrap: wrap;
   opacity: 0;
   animation: fadeUp 0.8s ease 0.9s forwards;
+  padding-bottom: 60px;
 }
 .hero-scroll {
   position: absolute;
@@ -1280,7 +1282,6 @@ p { font-size: 1rem; color: var(--charcoal-light); }
     </div>
     <div class="container">
       <div class="hero-content">
-        <div class="hero-tag">Coach · Athlete · Wife · Mother</div>
         <h1 class="hero-h1">Thoughts, Lessons, and Things That <em>Actually Make</em> a Difference.</h1>
         <p class="hero-sub">Life as a coach, athlete, wife, and mother — sharing experiences, perspectives, and trusted recommendations that help make life better.</p>
         <div class="hero-ctas">
