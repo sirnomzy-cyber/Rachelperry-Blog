@@ -1234,6 +1234,19 @@ p { font-size: 1rem; color: var(--charcoal-light); }
   .about-stats { grid-template-columns: 1fr 1fr; }
 }
 
+/* Reverse rec article (text left, image right) */
+.rec-article-reverse {
+  grid-template-columns: 1.5fr 1fr;
+}
+@media (max-width: 1024px) {
+  .rec-article-reverse {
+    grid-template-columns: 1fr;
+  }
+  .rec-article-reverse .rec-article-img {
+    order: -1;
+  }
+}
+
 /* ============================================================
    INDIVIDUAL POST PAGES
    ============================================================ */
@@ -1523,7 +1536,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
         </div>
         <div class="writing-card reveal reveal-delay-1">
           <div class="writing-card-img">
-            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&q=80" alt="Enough Was Enough" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=400&q=80" alt="Enough Was Enough" loading="lazy">
           </div>
           <div class="writing-card-body">
             <div class="writing-card-meta">
@@ -1676,7 +1689,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
       </div>
 
       <div class="story-block reverse reveal">
-        <img class="story-img" src="images/rachel-family-school.jpg" alt="Rachel with Mike and the twins">
+        <img class="story-img" src="images/rachel-family-school.jpg" alt="Rachel with Mike and the twins" style="object-position: center top;">
         <div class="story-text">
           <div class="story-label">Life As A Mom</div>
           <h3>Motherhood Changed Everything I Thought I Knew.</h3>
@@ -1827,7 +1840,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
       </div>
 
       <!-- POST 2: PVOLVE -->
-      <div class="rec-article reveal" style="grid-template-columns: 1.5fr 1fr;">
+      <div class="rec-article rec-article-reverse reveal">
         <div class="rec-article-body" style="padding: 48px;">
           <div class="section-label">Fitness</div>
           <h3>PVOLVE: Strength That Finally Makes Sense</h3>
@@ -1950,7 +1963,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
         <!-- 3 -->
         <div class="blog-card reveal reveal-delay-2" data-category="family" data-title="Enough Was Enough">
           <div class="blog-card-img">
-            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80" alt="Grocery store healing" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=600&q=80" alt="Enough Was Enough" loading="lazy">
           </div>
           <div class="blog-card-body">
             <div class="blog-card-meta">
@@ -1984,7 +1997,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
         <!-- 5 -->
         <div class="blog-card reveal reveal-delay-1" data-category="motherhood" data-title="Meet Rachel and her twinnies">
           <div class="blog-card-img">
-            <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=600&q=80" alt="Rachel and her twins" loading="lazy">
+            <img src="images/rachel-twinnies.jpg" alt="Rachel and her twins" style="object-position: center top;" loading="lazy">
           </div>
           <div class="blog-card-body">
             <div class="blog-card-meta">
@@ -2035,7 +2048,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
         <!-- 8 -->
         <div class="blog-card reveal reveal-delay-1" data-category="family" data-title="The Unexpected Journey that Led Me Here">
           <div class="blog-card-img">
-            <img src="https://images.unsplash.com/photo-1530268729831-4b0b9e170218?w=600&q=80" alt="Journey and road" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?w=600&q=80" alt="The Unexpected Journey" loading="lazy">
           </div>
           <div class="blog-card-body">
             <div class="blog-card-meta">
@@ -2316,7 +2329,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
 <div class="page" id="page-post-enough">
   <div class="post-page-full">
     <div class="post-hero">
-      <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1400&q=80" alt="Enough Was Enough">
+      <img src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=1400&q=80" alt="Enough Was Enough">
       <div class="post-hero-content">
         <div class="post-meta-bar">
           <span class="badge">Family</span>
@@ -2428,7 +2441,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
 <div class="page" id="page-post-twinnies">
   <div class="post-page-full">
     <div class="post-hero">
-      <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=1400&q=80" alt="Meet Rachel and her twinnies">
+      <img src="images/rachel-twinnies.jpg" alt="Meet Rachel and her twinnies" style="object-position: center top;">
       <div class="post-hero-content">
         <div class="post-meta-bar">
           <span class="badge">Motherhood</span>
@@ -2580,7 +2593,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
 <div class="page" id="page-post-journey">
   <div class="post-page-full">
     <div class="post-hero">
-      <img src="https://images.unsplash.com/photo-1530268729831-4b0b9e170218?w=1400&q=80" alt="The Unexpected Journey">
+      <img src="https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?w=1400&q=80" alt="The Unexpected Journey">
       <div class="post-hero-content">
         <div class="post-meta-bar">
           <span class="badge">Family</span>
