@@ -1233,6 +1233,118 @@ p { font-size: 1rem; color: var(--charcoal-light); }
   .hero-ctas .btn { width: 100%; justify-content: center; }
   .about-stats { grid-template-columns: 1fr 1fr; }
 }
+
+/* ============================================================
+   INDIVIDUAL POST PAGES
+   ============================================================ */
+.post-page-full { background: var(--white); }
+.post-page-full .post-hero {
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+}
+.post-page-full .post-hero img {
+  width: 100%; height: 100%; object-fit: cover; filter: brightness(0.45);
+}
+.post-page-full .post-hero-content {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: flex-end;
+  padding: 48px 24px;
+  text-align: center;
+  color: white;
+}
+.post-page-full .post-hero-content .badge { margin-bottom: 16px; }
+.post-page-full .post-hero-content h1 {
+  color: white;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  max-width: 760px;
+  line-height: 1.2;
+}
+.post-full-body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+}
+.post-full-body .post-author {
+  display: flex; align-items: center; gap: 16px;
+  padding: 20px 24px;
+  background: var(--beige);
+  border-radius: var(--radius-lg);
+  margin-bottom: 40px;
+  border: 1px solid var(--border);
+}
+.post-full-body .post-author-img {
+  width: 52px; height: 52px;
+  border-radius: 50%; overflow: hidden;
+  border: 2px solid var(--gold); flex-shrink: 0;
+}
+.post-full-body .post-author-img img { height: 100%; object-fit: cover; }
+.post-full-body .post-author-name { font-weight: 500; font-size: 0.9rem; }
+.post-full-body .post-author-bio { font-size: 0.78rem; color: var(--text-muted); }
+.post-full-content p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--charcoal-light);
+  margin-bottom: 22px;
+}
+.post-full-content h2 {
+  font-size: 1.7rem;
+  margin: 40px 0 16px;
+  color: var(--charcoal);
+}
+.post-full-content blockquote {
+  border-left: 3px solid var(--gold);
+  padding: 16px 24px;
+  margin: 32px 0;
+  background: var(--beige);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+.post-full-content strong { color: var(--charcoal); font-weight: 600; }
+.post-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--charcoal-light);
+  margin-bottom: 40px;
+  transition: color var(--transition);
+}
+.post-back-btn:hover { color: var(--gold); }
+.post-full-share {
+  display: flex; align-items: center; gap: 12px;
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin: 40px 0;
+}
+.post-full-nl {
+  background: var(--beige);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  text-align: center;
+  margin-top: 40px;
+}
+.post-full-nl h3 { margin-bottom: 8px; }
+.post-full-nl p { margin-bottom: 20px; max-width: 400px; margin-left: auto; margin-right: auto; }
+.post-full-nl-row {
+  display: flex; gap: 10px;
+  max-width: 420px; margin: 0 auto;
+}
+.post-meta-bar {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 16px; flex-wrap: wrap; justify-content: center;
+}
+.post-meta-bar span { font-size: 0.8rem; color: rgba(255,255,255,0.7); }
+
 </style>
 </head>
 <body>
@@ -1347,7 +1459,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h3 class="rec-card-title">Function Health: I Stopped Guessing and Started Knowing</h3>
             <p class="rec-card-excerpt">I run a business on data. So why was I guessing about my own health? Function Health changed that with 100+ biomarkers tested twice a year.</p>
-            <a href="#" class="read-more" onclick="showPage('recommendations')">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-function')">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
         <div class="rec-card reveal reveal-delay-1">
@@ -1361,7 +1473,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h3 class="rec-card-title">PVOLVE: Strength That Finally Makes Sense</h3>
             <p class="rec-card-excerpt">I was a barre junkie. Then I found PVOLVE — low-impact, functional, and ridiculously effective. My posture, balance and runs have never been better.</p>
-            <a href="#" class="read-more" onclick="showPage('recommendations')">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-pvolve')">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
         <div class="rec-card reveal reveal-delay-2">
@@ -1406,7 +1518,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h3 class="writing-card-title">Are You as Safe as You Think?</h3>
             <p class="writing-card-excerpt">I was the top earner. Multiple Presidents Club winner. Then I got laid off. That final layoff was the last time I was willing to build my life on something I didn't control.</p>
-            <a href="#" class="read-more" onclick="showPage('writing')">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-safe')"">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
         <div class="writing-card reveal reveal-delay-1">
@@ -1420,7 +1532,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h3 class="writing-card-title">Enough Was Enough</h3>
             <p class="writing-card-excerpt">Growing up, money was a constant weight. I watched my mom quietly remove items from the cart because the total was too high. I promised myself my past would not dictate my future.</p>
-            <a href="#" class="read-more" onclick="showPage('writing')">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-enough')"">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
         <div class="writing-card reveal">
@@ -1434,7 +1546,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h3 class="writing-card-title">From Victim to Victor</h3>
             <p class="writing-card-excerpt">"How am I going to tell my husband?" We were finally climbing out of a dark financial hole — and then, just like that, it was gone. What happened next surprised me most.</p>
-            <a href="#" class="read-more" onclick="showPage('writing')">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-victor')"">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
         <div class="writing-card reveal reveal-delay-1">
@@ -1448,7 +1560,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h3 class="writing-card-title">This Might Just Change Everything</h3>
             <p class="writing-card-excerpt">"I'm working 12-hour days, barely making ends meet." A friend called me in tears. I'd been in her exact shoes. Here's what I told her — and what I wish I'd known sooner.</p>
-            <a href="#" class="read-more" onclick="showPage('writing')">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-change')"">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
       </div>
@@ -1706,7 +1818,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
           </div>
           <div class="rec-quote">"I stopped making health decisions based on how I felt on any given Tuesday. I started making them based on what the data actually showed. That shift changed everything."</div>
           <p style="font-size:0.9rem; color: var(--charcoal-light);">I'm not chasing perfect health. I'm not trying to optimize every metric or live forever. I just want to make informed decisions. Function gave me that — a clearer picture of my own biology, and the ability to catch things early when they're easier to address.</p>
-          <a href="https://my.functionhealth.com/signup?code=RPERRY29&_saasquatch=RPERRY29" target="_blank" class="btn btn-gold">Learn More & Sign Up →</a>
+          <a href="#" class="btn btn-outline" onclick="showPage('page-post-function')" style="margin-right:12px;">Read Full Review →</a><a href="https://my.functionhealth.com/signup?code=RPERRY29&_saasquatch=RPERRY29" target="_blank" class="btn btn-gold">Sign Up Here →</a>
           <div class="affiliate-notice">Affiliate link: Rachel earns a small commission if you sign up. Her recommendation is genuine — she uses Function Health herself.</div>
         </div>
       </div>
@@ -1725,7 +1837,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             <div class="rec-benefit">Challenging without being punishing — you finish and feel good</div>
           </div>
           <div class="rec-quote">"PVOLVE gave me the kind of balance I didn't realize I'd lost. It makes me feel strong, centered, and capable — not just in the gym, but in everything else I do."</div>
-          <a href="https://pvolve.refr.cc/refer-a-friend/u/rachperry?s=sp&t=cp" target="_blank" class="btn btn-gold">Try PVOLVE Here →</a>
+          <a href="#" class="btn btn-outline" onclick="showPage('page-post-pvolve')" style="margin-right:12px;">Read Full Review →</a><a href="https://pvolve.refr.cc/refer-a-friend/u/rachperry?s=sp&t=cp" target="_blank" class="btn btn-gold">Try PVOLVE Here →</a>
           <div class="affiliate-notice">Affiliate link: Rachel earns a small commission if you sign up. She uses PVOLVE herself and genuinely recommends it.</div>
         </div>
         <div class="rec-article-img">
@@ -1751,7 +1863,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
           </div>
           <div class="rec-quote">"Whether I'm heading into a coaching session, a run, or school pickup — this is part of how I show up ready. It's not magic. It just works."</div>
           <p style="font-size:0.9rem; color: var(--charcoal-light);">It's not just a sports supplement. It's a mental clarity tool for busy parents, professionals, and anyone who needs to bring their best self to a full day. That's my life — and this fits it.</p>
-          <a href="https://ketone.com/rach" target="_blank" class="btn btn-gold">Try Ketone-IQ Here →</a>
+          <a href="#" class="btn btn-outline" onclick="showPage('page-post-ketone')" style="margin-right:12px;">Read Full Review →</a><a href="https://ketone.com/rach" target="_blank" class="btn btn-gold">Try Ketone-IQ Here →</a>
           <div class="affiliate-notice">Affiliate link: Rachel earns a small commission if you purchase. She uses this product daily and recommends it from personal experience.</div>
         </div>
       </div>
@@ -1805,7 +1917,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h4 class="blog-card-title">Are You as Safe as You Think?</h4>
             <p class="blog-card-excerpt">I was the top earner. Multiple Presidents Club winner. The accolades went on and on. So what happened? I got laid off. That final layoff changed something in me forever.</p>
-            <a href="#" class="read-more" onclick="showPage('post')">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-safe')">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
 
@@ -1822,7 +1934,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h4 class="blog-card-title">Discouragement? Defeat? Imposter Syndrome? Let's Talk.</h4>
             <p class="blog-card-excerpt">There were seasons when giving up felt easier than continuing. I faked confidence for years, hoping it would eventually become real. Here's what I learned.</p>
-            <a href="#" class="read-more" onclick="showPage('post')">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-discouragement')">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
 
@@ -1839,7 +1951,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h4 class="blog-card-title">Enough Was Enough</h4>
             <p class="blog-card-excerpt">Growing up, money was a constant weight. I watched my mom quietly remove items from the cart because the total was too high. I promised myself my past would not dictate my future.</p>
-            <a href="#" class="read-more" onclick="showPage('post')">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-enough')">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
 
@@ -1856,7 +1968,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h4 class="blog-card-title">From Victim to Victor</h4>
             <p class="blog-card-excerpt">"How am I going to tell my husband?" We were finally climbing out of a dark financial hole — and then, just like that, it was gone. What happened next surprised me most.</p>
-            <a href="#" class="read-more" onclick="showPage('post')">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-victor')">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
 
@@ -1873,7 +1985,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h4 class="blog-card-title">Meet Rachel and Her Twinnies</h4>
             <p class="blog-card-excerpt">I love being a mom to my twin girls and getting out for a run whenever I can. It wasn't always this way. Here's what the journey looked like — and what it taught me.</p>
-            <a href="#" class="read-more" onclick="showPage('post')">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-twinnies')">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
 
@@ -1890,7 +2002,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h4 class="blog-card-title">The Difference Between "Almost" and "Achieved"</h4>
             <p class="blog-card-excerpt">Two hikers. Same mountain. Same exhaustion. One turned back. One adjusted their pack and kept going. The climb didn't change the mountain — it changed the hiker.</p>
-            <a href="#" class="read-more" onclick="showPage('post')">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-difference')">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
 
@@ -1907,7 +2019,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h4 class="blog-card-title">The Ultimate Luxury You're Missing Out On</h4>
             <p class="blog-card-excerpt">In a world that demands more every day, there's one resource we're all desperately short on: Time. What are we really sacrificing in this endless pursuit?</p>
-            <a href="#" class="read-more" onclick="showPage('post')">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-luxury')">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
 
@@ -1924,7 +2036,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h4 class="blog-card-title">The Unexpected Journey That Led Me Here</h4>
             <p class="blog-card-excerpt">A mistakenly dialed phone call at 21. A move from New York to North Carolina. A husband who changed everything. A layoff that became a launching pad. My full story.</p>
-            <a href="#" class="read-more" onclick="showPage('post')">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-journey')">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
 
@@ -1941,7 +2053,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h4 class="blog-card-title">This Might Just Change Everything</h4>
             <p class="blog-card-excerpt">"I hate this. I'm working 12-hour days, barely making ends meet." A friend called me in tears last week. I'd been in her shoes. Here's what I told her — and what I wish I'd known sooner.</p>
-            <a href="#" class="read-more" onclick="showPage('post')">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-change')">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
 
@@ -2070,6 +2182,705 @@ p { font-size: 1rem; color: var(--charcoal-light); }
 <!-- ============================================================
      FOOTER (shared)
      ============================================================ -->
+
+
+<!-- ============================================================
+     INDIVIDUAL WRITING POST PAGES
+     ============================================================ -->
+
+<!-- POST: Are You as Safe as You Think -->
+<div class="page" id="page-post-safe">
+  <div class="post-page-full">
+    <div class="post-hero">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1400&q=80" alt="Are You as Safe as You Think">
+      <div class="post-hero-content">
+        <div class="post-meta-bar">
+          <span class="badge">Mindset</span>
+          <span>May 20, 2025</span>
+          <span>⏱ 4 min read</span>
+        </div>
+        <h1>Are You as Safe as You Think?</h1>
+      </div>
+    </div>
+    <div class="post-full-body">
+      <a href="#" class="post-back-btn" onclick="showPage('writing')">← Back to Writing & Perspective</a>
+      <div class="post-author">
+        <div class="post-author-img"><img src="images/rachel-avatar.jpg" alt="Rachel"></div>
+        <div>
+          <div class="post-author-name">Rachel</div>
+          <div class="post-author-bio">Coach · Athlete · Wife · Mother of Twins</div>
+        </div>
+      </div>
+      <div class="post-full-content">
+        <p><strong>What the heck!</strong> I was the top earner. A multiple Presidents Club winner. The top trainer. The accolades went on and on.</p>
+        <p>So what happened? I got laid off. Me.</p>
+        <p>I'm not one to brag, but I was exceptional at my job — and they knew it.</p>
+        <p>I wish I could say it was the first time. It wasn't. I'd been laid off twice before. Back then, it embarrassed me. Now I understand something I didn't then: in business, it's rarely personal.</p>
+        <p>But that doesn't mean it doesn't hurt.</p>
+        <p>That final layoff changed something in me. Not because it was the worst — but because it was the last time I was willing to build my life on something I didn't control.</p>
+        <p>Those feelings came rushing back recently when a close friend called me in tears after a shocking layoff of her own.</p>
+        <p>She had just been promoted. Just returned from a company-paid trip to Cabo. Just been celebrated on a company-wide call. By every visible measure, she was secure.</p>
+        <blockquote>"Hop on Zoom now. We need to discuss something."</blockquote>
+        <p>And just like that, everything shifted.</p>
+        <p>After a few hours of processing, she asked me, "Why didn't you go back to corporate after your last layoff?"</p>
+        <p><strong>The answer surprised even me.</strong></p>
+        <p>Because I couldn't unlearn what I had finally understood: job security is often an illusion. Performance doesn't always equal protection. Loyalty doesn't guarantee longevity.</p>
+        <p>Stepping away from what everyone calls "safe" is uncomfortable. When I made that decision, people told me I was making a mistake. They couldn't see what I felt deep down — that I needed to define stability on my own terms.</p>
+        <p>Looking back, I'm grateful I listened to that quiet voice instead of the loud opinions.</p>
+        <p>Here's what I know now: <strong>no matter how talented you are, companies make decisions based on what keeps the machine running.</strong></p>
+        <blockquote>And sometimes, getting laid off isn't the end of your story. It's the moment you decide to write it differently.</blockquote>
+      </div>
+      <div class="post-full-share">
+        <span class="share-label">Share</span>
+        <button class="share-btn">f</button>
+        <button class="share-btn">𝕏</button>
+        <button class="share-btn">P</button>
+        <button class="share-btn" onclick="copyLink()">🔗</button>
+      </div>
+      <div class="post-full-nl">
+        <div class="section-label" style="display:block;text-align:center;margin-bottom:8px;">Community</div>
+        <h3>Enjoyed this? Join the community.</h3>
+        <p>Get more stories like this delivered to your inbox every week.</p>
+        <div class="post-full-nl-row">
+          <input class="nl-input" type="email" placeholder="Your email" style="flex:1;border-radius:50px;">
+          <button class="btn btn-gold" onclick="handleSubscribe()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POST: Discouragement -->
+<div class="page" id="page-post-discouragement">
+  <div class="post-page-full">
+    <div class="post-hero">
+      <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=1400&q=80" alt="Discouragement">
+      <div class="post-hero-content">
+        <div class="post-meta-bar">
+          <span class="badge">Mindset</span>
+          <span>May 5, 2025</span>
+          <span>⏱ 3 min read</span>
+        </div>
+        <h1>Discouragement? Defeat? Imposter Syndrome? Let's Talk.</h1>
+      </div>
+    </div>
+    <div class="post-full-body">
+      <a href="#" class="post-back-btn" onclick="showPage('writing')">← Back to Writing & Perspective</a>
+      <div class="post-author">
+        <div class="post-author-img"><img src="images/rachel-avatar.jpg" alt="Rachel"></div>
+        <div>
+          <div class="post-author-name">Rachel</div>
+          <div class="post-author-bio">Coach · Athlete · Wife · Mother of Twins</div>
+        </div>
+      </div>
+      <div class="post-full-content">
+        <p>There were seasons when giving up felt easier than continuing. When perseverance felt like something other people were born with.</p>
+        <p>My path has never been straight. There were more detours than victories in the beginning. More doubts than certainty.</p>
+        <p>For a long time, I faked confidence, hoping it would eventually become real. Imposter syndrome was loud — constant — convincing me that I was one step away from being "found out." I questioned my decisions. My unconventional path. Whether anyone would ever take me seriously.</p>
+        <p>Some days, it felt like every time I gained momentum, another wall appeared.</p>
+        <p>But what I've come to understand is this: <strong>growth rarely feels powerful while it's happening.</strong></p>
+        <p>It feels awkward. Unsteady. Unimpressive.</p>
+        <p>My life didn't transform overnight. It shifted slowly — through persistence I didn't always feel, through courage that looked more like showing up again than anything heroic.</p>
+        <p>Even now, I still stretch beyond my comfort zone. The difference is that I no longer expect confidence to come first.</p>
+        <blockquote>I've learned that doubt doesn't disappear before progress begins. It fades because progress begins.</blockquote>
+        <p>And sometimes, the bravest thing we can do is keep moving — not because we feel fearless, but because we decide we're not done yet.</p>
+      </div>
+      <div class="post-full-share">
+        <span class="share-label">Share</span>
+        <button class="share-btn">f</button><button class="share-btn">𝕏</button>
+        <button class="share-btn">P</button><button class="share-btn" onclick="copyLink()">🔗</button>
+      </div>
+      <div class="post-full-nl">
+        <div class="section-label" style="display:block;text-align:center;margin-bottom:8px;">Community</div>
+        <h3>Enjoyed this? Join the community.</h3>
+        <p>Get more stories like this delivered to your inbox every week.</p>
+        <div class="post-full-nl-row">
+          <input class="nl-input" type="email" placeholder="Your email" style="flex:1;border-radius:50px;">
+          <button class="btn btn-gold" onclick="handleSubscribe()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POST: Enough Was Enough -->
+<div class="page" id="page-post-enough">
+  <div class="post-page-full">
+    <div class="post-hero">
+      <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1400&q=80" alt="Enough Was Enough">
+      <div class="post-hero-content">
+        <div class="post-meta-bar">
+          <span class="badge">Family</span>
+          <span>Apr 22, 2025</span>
+          <span>⏱ 4 min read</span>
+        </div>
+        <h1>Enough Was Enough</h1>
+      </div>
+    </div>
+    <div class="post-full-body">
+      <a href="#" class="post-back-btn" onclick="showPage('writing')">← Back to Writing & Perspective</a>
+      <div class="post-author">
+        <div class="post-author-img"><img src="images/rachel-avatar.jpg" alt="Rachel"></div>
+        <div>
+          <div class="post-author-name">Rachel</div>
+          <div class="post-author-bio">Coach · Athlete · Wife · Mother of Twins</div>
+        </div>
+      </div>
+      <div class="post-full-content">
+        <p>I was pulling into the grocery store today when something hit me — I didn't have to think twice about shopping. No mental math. No quiet panic at the register. No frantic coupon clipping (though I probably should — I always forget them anyway).</p>
+        <p>That wasn't always my reality.</p>
+        <p>Growing up, money was tight. My brother and I had our basic needs met, but finances were a constant weight in our home. I remember grocery trips with my mom. We'd fill what we thought was a modest cart, only to reach the register and watch her quietly remove items because the total was too high.</p>
+        <p>Mac & cheese became a staple. Not by choice — but because it was what we could afford.</p>
+        <p>It wasn't until I moved 600 miles away in my 20s that I realized how deeply those struggles were ingrained in me. I fell into the same patterns. Always coming up short. Putting exactly $5 in the gas tank. Counting every penny at the grocery store.</p>
+        <p>I was living the opposite of the life I wanted.</p>
+        <blockquote>I knew I had to break the cycle. My parents never tried to change their situation — they didn't believe they could. Even now, they're still where they were 30 years ago.</blockquote>
+        <p>Just last week, my mom mentioned going to a food bank. It shattered something in me.</p>
+        <p>That was the moment I made a promise to myself: <strong>my past would not dictate my future.</strong></p>
+        <p>I started thinking differently. Learning differently. Choosing differently. I've had setbacks — plenty of them — but I'm not stuck anymore.</p>
+        <p>And sometimes, healing looks like something as simple as walking into a grocery store… and not feeling afraid.</p>
+      </div>
+      <div class="post-full-share">
+        <span class="share-label">Share</span>
+        <button class="share-btn">f</button><button class="share-btn">𝕏</button>
+        <button class="share-btn">P</button><button class="share-btn" onclick="copyLink()">🔗</button>
+      </div>
+      <div class="post-full-nl">
+        <div class="section-label" style="display:block;text-align:center;margin-bottom:8px;">Community</div>
+        <h3>Enjoyed this? Join the community.</h3>
+        <p>Get more stories like this delivered to your inbox every week.</p>
+        <div class="post-full-nl-row">
+          <input class="nl-input" type="email" placeholder="Your email" style="flex:1;border-radius:50px;">
+          <button class="btn btn-gold" onclick="handleSubscribe()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POST: From Victim to Victor -->
+<div class="page" id="page-post-victor">
+  <div class="post-page-full">
+    <div class="post-hero">
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=1400&q=80" alt="From Victim to Victor">
+      <div class="post-hero-content">
+        <div class="post-meta-bar">
+          <span class="badge">Coaching</span>
+          <span>Apr 8, 2025</span>
+          <span>⏱ 4 min read</span>
+        </div>
+        <h1>From Victim to Victor</h1>
+      </div>
+    </div>
+    <div class="post-full-body">
+      <a href="#" class="post-back-btn" onclick="showPage('writing')">← Back to Writing & Perspective</a>
+      <div class="post-author">
+        <div class="post-author-img"><img src="images/rachel-avatar.jpg" alt="Rachel"></div>
+        <div>
+          <div class="post-author-name">Rachel</div>
+          <div class="post-author-bio">Coach · Athlete · Wife · Mother of Twins</div>
+        </div>
+      </div>
+      <div class="post-full-content">
+        <blockquote>"No. No, this isn't happening… this isn't happening. Crap. How am I going to tell my husband?"</blockquote>
+        <p>We were finally climbing out of that dark financial hole. For the first time in a long time, we had a little cushion. Still living paycheck to paycheck — but at least we could breathe.</p>
+        <p>And then, just like that, it was gone.</p>
+        <p>I had always believed I was too aware, too careful to fall for a scam. I used to think, <em>That would never be me.</em></p>
+        <p>It was me.</p>
+        <p>I remember trying to stay calm. "Okay. I'll go to the bank. I'll file a report. We'll fix it." That tiny spark of hope flickered — but deep down, I already knew the truth.</p>
+        <p>The money wasn't coming back.</p>
+        <p>What surprised me most wasn't the panic. It was the shame. The humiliation. The voice in my head was louder than the loss itself.</p>
+        <blockquote>"How could you let this happen?"</blockquote>
+        <p>For a few days, I let that voice win.</p>
+        <p>Then something shifted.</p>
+        <p>I realized the number in my bank account — red and glaring — didn't get to define what happened next. I couldn't undo the mistake, but I could decide who I was going to be after it.</p>
+        <p>That moment became a dividing line for me. Not because of the money. But because of what it forced me to confront — my pride, my fear, my tendency to spiral when things went wrong.</p>
+        <p>Looking back, losing that money hurt.</p>
+        <p><strong>But losing my confidence would have cost far more.</strong></p>
+      </div>
+      <div class="post-full-share">
+        <span class="share-label">Share</span>
+        <button class="share-btn">f</button><button class="share-btn">𝕏</button>
+        <button class="share-btn">P</button><button class="share-btn" onclick="copyLink()">🔗</button>
+      </div>
+      <div class="post-full-nl">
+        <div class="section-label" style="display:block;text-align:center;margin-bottom:8px;">Community</div>
+        <h3>Enjoyed this? Join the community.</h3>
+        <p>Get more stories like this delivered to your inbox every week.</p>
+        <div class="post-full-nl-row">
+          <input class="nl-input" type="email" placeholder="Your email" style="flex:1;border-radius:50px;">
+          <button class="btn btn-gold" onclick="handleSubscribe()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POST: Meet Rachel and her twinnies -->
+<div class="page" id="page-post-twinnies">
+  <div class="post-page-full">
+    <div class="post-hero">
+      <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=1400&q=80" alt="Meet Rachel and her twinnies">
+      <div class="post-hero-content">
+        <div class="post-meta-bar">
+          <span class="badge">Motherhood</span>
+          <span>Mar 25, 2025</span>
+          <span>⏱ 3 min read</span>
+        </div>
+        <h1>Meet Rachel and Her Twinnies</h1>
+      </div>
+    </div>
+    <div class="post-full-body">
+      <a href="#" class="post-back-btn" onclick="showPage('writing')">← Back to Writing & Perspective</a>
+      <div class="post-author">
+        <div class="post-author-img"><img src="images/rachel-avatar.jpg" alt="Rachel"></div>
+        <div>
+          <div class="post-author-name">Rachel</div>
+          <div class="post-author-bio">Coach · Athlete · Wife · Mother of Twins</div>
+        </div>
+      </div>
+      <div class="post-full-content">
+        <p><em>This is Rachel, from Holly Springs, North Carolina.</em></p>
+        <p>I love being a mom to my twin girls and getting out for a run whenever I can. It wasn't always this way.</p>
+        <p>Over the years, I tried so many paths, chasing opportunities I thought would change my life. I invested time, energy, and money… and kept running into dead ends. Each failure felt heavier than the last.</p>
+        <p>Everything shifted when I realized the power of real communication and genuine connection. It's amazing how much clarity and progress can come from surrounding yourself with the right people and building honest relationships.</p>
+        <p>Now, my life looks very different. I have the flexibility to spend time with my daughters, pursue my passions, and focus on what truly matters to me.</p>
+        <blockquote>The biggest lessons weren't about the paths I tried or the money I spent — they were about understanding people, building trust, and showing up consistently.</blockquote>
+        <p>It's a reminder that success rarely comes from shortcuts. It comes from patience, persistence, and learning from the journey itself.</p>
+      </div>
+      <div class="post-full-share">
+        <span class="share-label">Share</span>
+        <button class="share-btn">f</button><button class="share-btn">𝕏</button>
+        <button class="share-btn">P</button><button class="share-btn" onclick="copyLink()">🔗</button>
+      </div>
+      <div class="post-full-nl">
+        <div class="section-label" style="display:block;text-align:center;margin-bottom:8px;">Community</div>
+        <h3>Enjoyed this? Join the community.</h3>
+        <p>Get more stories like this delivered to your inbox every week.</p>
+        <div class="post-full-nl-row">
+          <input class="nl-input" type="email" placeholder="Your email" style="flex:1;border-radius:50px;">
+          <button class="btn btn-gold" onclick="handleSubscribe()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POST: The Difference Between -->
+<div class="page" id="page-post-difference">
+  <div class="post-page-full">
+    <div class="post-hero">
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400&q=80" alt="The Difference Between Almost and Achieved">
+      <div class="post-hero-content">
+        <div class="post-meta-bar">
+          <span class="badge">Mindset</span>
+          <span>Mar 10, 2025</span>
+          <span>⏱ 3 min read</span>
+        </div>
+        <h1>The Difference Between "Almost" and "Achieved"</h1>
+      </div>
+    </div>
+    <div class="post-full-body">
+      <a href="#" class="post-back-btn" onclick="showPage('writing')">← Back to Writing & Perspective</a>
+      <div class="post-author">
+        <div class="post-author-img"><img src="images/rachel-avatar.jpg" alt="Rachel"></div>
+        <div>
+          <div class="post-author-name">Rachel</div>
+          <div class="post-author-bio">Coach · Athlete · Wife · Mother of Twins</div>
+        </div>
+      </div>
+      <div class="post-full-content">
+        <p>Imagine two hikers setting off on a steep trail toward a breathtaking summit. Both are determined. Both carry heavy packs filled with everything they think they'll need for the climb.</p>
+        <p>Halfway up, the path narrows. The air thins. Muscles ache. Doubt creeps in.</p>
+        <p>One hiker stops and looks back at the trailhead. From where they're standing, the view is decent. Safe. Familiar. They decide it's enough. They turn around, telling themselves they've gone far enough.</p>
+        <p>The other hiker feels the same exhaustion. The same doubt. But instead of turning back, they pause. They adjust the straps on their pack. They leave behind what's weighing them down. They take a slower pace.</p>
+        <p>Not because it's easy. But because something about the summit still calls them forward.</p>
+        <p>Step by step, they continue. Not in a dramatic sprint — just steady movement. And when they finally reach the top, the view is wider than they imagined. Not just because of the height, but because of what it took to get there.</p>
+        <blockquote>In life, we all face moments where the going gets tough. It's easy to settle for "almost," to turn back when the finish line seems out of reach.</blockquote>
+        <p>The climb didn't change the mountain.</p>
+        <p>It changed the hiker.</p>
+        <p><strong>And sometimes, that's the real reward.</strong></p>
+      </div>
+      <div class="post-full-share">
+        <span class="share-label">Share</span>
+        <button class="share-btn">f</button><button class="share-btn">𝕏</button>
+        <button class="share-btn">P</button><button class="share-btn" onclick="copyLink()">🔗</button>
+      </div>
+      <div class="post-full-nl">
+        <div class="section-label" style="display:block;text-align:center;margin-bottom:8px;">Community</div>
+        <h3>Enjoyed this? Join the community.</h3>
+        <p>Get more stories like this delivered to your inbox every week.</p>
+        <div class="post-full-nl-row">
+          <input class="nl-input" type="email" placeholder="Your email" style="flex:1;border-radius:50px;">
+          <button class="btn btn-gold" onclick="handleSubscribe()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POST: The Ultimate Luxury -->
+<div class="page" id="page-post-luxury">
+  <div class="post-page-full">
+    <div class="post-hero">
+      <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1400&q=80" alt="The Ultimate Luxury">
+      <div class="post-hero-content">
+        <div class="post-meta-bar">
+          <span class="badge">Coaching</span>
+          <span>Feb 20, 2025</span>
+          <span>⏱ 3 min read</span>
+        </div>
+        <h1>The Ultimate Luxury You're Missing Out On</h1>
+      </div>
+    </div>
+    <div class="post-full-body">
+      <a href="#" class="post-back-btn" onclick="showPage('writing')">← Back to Writing & Perspective</a>
+      <div class="post-author">
+        <div class="post-author-img"><img src="images/rachel-avatar.jpg" alt="Rachel"></div>
+        <div>
+          <div class="post-author-name">Rachel</div>
+          <div class="post-author-bio">Coach · Athlete · Wife · Mother of Twins</div>
+        </div>
+      </div>
+      <div class="post-full-content">
+        <p>In a world that demands more from us every day, <strong>there's one resource we're all desperately short on: Time.</strong></p>
+        <p>We sacrifice hours and hours at work, only to come home and stay glued to our devices — still working or seeking a quick dopamine fix to numb the exhaustion.</p>
+        <p>But what are we sacrificing in this endless pursuit? Genuine connections with loved ones, the chance to simply be present with ourselves, and the freedom to live life on our terms.</p>
+        <p>I worried about what others thought of my choices, of my unconventional path. I was constantly battling the brick walls that seemed to spring up overnight. But here's the thing: <strong>I refused to give up.</strong></p>
+        <blockquote>Imagine a life where you're not chained to a desk, constantly requesting time off or worrying about work when life throws you a curveball. A life where you own your time and have the flexibility to prioritize what truly matters.</blockquote>
+        <p>Let's explore how you can escape the time trap and create a life of true abundance and freedom.</p>
+      </div>
+      <div class="post-full-share">
+        <span class="share-label">Share</span>
+        <button class="share-btn">f</button><button class="share-btn">𝕏</button>
+        <button class="share-btn">P</button><button class="share-btn" onclick="copyLink()">🔗</button>
+      </div>
+      <div class="post-full-nl">
+        <div class="section-label" style="display:block;text-align:center;margin-bottom:8px;">Community</div>
+        <h3>Enjoyed this? Join the community.</h3>
+        <p>Get more stories like this delivered to your inbox every week.</p>
+        <div class="post-full-nl-row">
+          <input class="nl-input" type="email" placeholder="Your email" style="flex:1;border-radius:50px;">
+          <button class="btn btn-gold" onclick="handleSubscribe()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POST: The Unexpected Journey -->
+<div class="page" id="page-post-journey">
+  <div class="post-page-full">
+    <div class="post-hero">
+      <img src="https://images.unsplash.com/photo-1530268729831-4b0b9e170218?w=1400&q=80" alt="The Unexpected Journey">
+      <div class="post-hero-content">
+        <div class="post-meta-bar">
+          <span class="badge">Family</span>
+          <span>Feb 3, 2025</span>
+          <span>⏱ 6 min read</span>
+        </div>
+        <h1>The Unexpected Journey That Led Me Here</h1>
+      </div>
+    </div>
+    <div class="post-full-body">
+      <a href="#" class="post-back-btn" onclick="showPage('writing')">← Back to Writing & Perspective</a>
+      <div class="post-author">
+        <div class="post-author-img"><img src="images/rachel-avatar.jpg" alt="Rachel"></div>
+        <div>
+          <div class="post-author-name">Rachel</div>
+          <div class="post-author-bio">Coach · Athlete · Wife · Mother of Twins</div>
+        </div>
+      </div>
+      <div class="post-full-content">
+        <p><em>It's tough to truly know someone over the internet, but I'd like to share a bit of my story — who I am and how I got to where I am today.</em></p>
+        <p>Growing up, life wasn't exactly smooth sailing. I was raised in a financially strained household, and with a parent struggling with drinking, it often felt like I was navigating through chaos.</p>
+        <p>Those early years were challenging, but they ignited a spark in me — a hunger for something better. I remember looking around, determined to create a life that was different from the one I knew. A life where happiness and stability were more than just dreams.</p>
+        <p>At 21, a moment of serendipity changed everything. I moved from New York to North Carolina because of a mistakenly dialed phone call that turned into a job offer. Crazy, right? That decision set me on a path of reinvention, far away from the constraints of my past.</p>
+        <p>Balancing online studies with corporate roles, I strove to find meaning and purpose in my work. Despite the challenges, I remained committed to the belief that my efforts could, in some way, make a positive impact.</p>
+        <p>I hit my "rebellion stage" when most people my age were starting to settle down. I was still working, but I was also living a very collegiate lifestyle. There were days I was so hungover I couldn't even get up to walk my dog without feeling sick.</p>
+        <blockquote>The direction of my life changed profoundly in 2013 when I met my amazing husband. I knew as soon as we met that he was a game changer.</blockquote>
+        <p>I smoked my last cigarette after a couple of dates, never wanting him to smell it on me. I stopped binge drinking, because I wanted to remember the time I was spending with him. After a year and a half dating, we were married.</p>
+        <p>In 2016, our world changed forever with the birth of our twin girls. Motherhood was a whole new journey — it made me want to be the best version of myself and to show my daughters that they could achieve anything.</p>
+        <p>Then, in 2022, like so many others, I was hit hard by the pandemic. I was laid off, and while it was a shock, it also became the push I needed. It forced me to step back and think: <em>What do I really want to do?</em></p>
+        <p>Now, I get to live the life I once only imagined. Every day, I wake up grateful for my family, for the chance to be present in my daughters' lives, and for the opportunity to pursue work that matters to me.</p>
+        <p><strong>Looking back, my journey has taught me that no matter where you start, with persistence and belief in yourself, life can unfold in ways you never imagined.</strong></p>
+      </div>
+      <div class="post-full-share">
+        <span class="share-label">Share</span>
+        <button class="share-btn">f</button><button class="share-btn">𝕏</button>
+        <button class="share-btn">P</button><button class="share-btn" onclick="copyLink()">🔗</button>
+      </div>
+      <div class="post-full-nl">
+        <div class="section-label" style="display:block;text-align:center;margin-bottom:8px;">Community</div>
+        <h3>Enjoyed this? Join the community.</h3>
+        <p>Get more stories like this delivered to your inbox every week.</p>
+        <div class="post-full-nl-row">
+          <input class="nl-input" type="email" placeholder="Your email" style="flex:1;border-radius:50px;">
+          <button class="btn btn-gold" onclick="handleSubscribe()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POST: This Might Just Change Everything -->
+<div class="page" id="page-post-change">
+  <div class="post-page-full">
+    <div class="post-hero">
+      <img src="https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=1400&q=80" alt="This Might Just Change Everything">
+      <div class="post-hero-content">
+        <div class="post-meta-bar">
+          <span class="badge">Mindset</span>
+          <span>Jan 15, 2025</span>
+          <span>⏱ 4 min read</span>
+        </div>
+        <h1>This Might Just Change Everything</h1>
+      </div>
+    </div>
+    <div class="post-full-body">
+      <a href="#" class="post-back-btn" onclick="showPage('writing')">← Back to Writing & Perspective</a>
+      <div class="post-author">
+        <div class="post-author-img"><img src="images/rachel-avatar.jpg" alt="Rachel"></div>
+        <div>
+          <div class="post-author-name">Rachel</div>
+          <div class="post-author-bio">Coach · Athlete · Wife · Mother of Twins</div>
+        </div>
+      </div>
+      <div class="post-full-content">
+        <blockquote>"I hate this. I'm working 12-hour days, barely making ends meet. My boss yelled at me this morning over her coffee order — which had nothing to do with me. I'm so miserable and stuck."</blockquote>
+        <p>That was a call from a friend last week.</p>
+        <p>I felt frustrated for her because I've been in her shoes. Sometimes we get so "comfortable" in our misery that we forget we have more agency than we think.</p>
+        <p>There was a season in my life that felt just like that. Exhausted. Disappointed. Quietly resentful. I knew I was capable of more, but I didn't know how to access it.</p>
+        <p>I coped in ways I'm not proud of. Numbing the stress with wine at night. Telling myself it was temporary. One Halloween, after a failed promotion, I was carrying so much frustration that I didn't even want to show up. That moment forced me to look at myself honestly.</p>
+        <p>I realized I didn't just need a new job. <strong>I needed a new standard for my life.</strong></p>
+        <p>Change didn't happen overnight. It wasn't dramatic. It was a series of uncomfortable decisions — small shifts that eventually became a different reality.</p>
+        <p>Today, my life looks nothing like that season. Not because I got lucky. But because I stopped accepting what was draining me as permanent.</p>
+        <blockquote>Looking back, I see it clearly now: the lowest points weren't proof that I was stuck. They were proof that I was ready.</blockquote>
+      </div>
+      <div class="post-full-share">
+        <span class="share-label">Share</span>
+        <button class="share-btn">f</button><button class="share-btn">𝕏</button>
+        <button class="share-btn">P</button><button class="share-btn" onclick="copyLink()">🔗</button>
+      </div>
+      <div class="post-full-nl">
+        <div class="section-label" style="display:block;text-align:center;margin-bottom:8px;">Community</div>
+        <h3>Enjoyed this? Join the community.</h3>
+        <p>Get more stories like this delivered to your inbox every week.</p>
+        <div class="post-full-nl-row">
+          <input class="nl-input" type="email" placeholder="Your email" style="flex:1;border-radius:50px;">
+          <button class="btn btn-gold" onclick="handleSubscribe()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- ============================================================
+     INDIVIDUAL RECOMMENDATION POST PAGES
+     ============================================================ -->
+
+<!-- REC POST: Function Health -->
+<div class="page" id="page-post-function">
+  <div class="post-page-full">
+    <div class="post-hero">
+      <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1400&q=80" alt="Function Health">
+      <div class="post-hero-content">
+        <div class="post-meta-bar">
+          <span class="badge badge-sage">Health & Wellness</span>
+          <span class="affiliate-badge" style="background:rgba(200,169,106,0.2);color:var(--gold-light);padding:4px 10px;border-radius:3px;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(200,169,106,0.4);">Affiliate</span>
+        </div>
+        <h1>Function Health: I Stopped Guessing and Started Knowing</h1>
+      </div>
+    </div>
+    <div class="post-full-body">
+      <a href="#" class="post-back-btn" onclick="showPage('recommendations')">← Back to Recommendations</a>
+      <div class="post-author">
+        <div class="post-author-img"><img src="images/rachel-avatar.jpg" alt="Rachel"></div>
+        <div>
+          <div class="post-author-name">Rachel</div>
+          <div class="post-author-bio">Coach · Athlete · Wife · Mother of Twins</div>
+        </div>
+      </div>
+      <div style="background:var(--beige);border-left:3px solid var(--gold);padding:12px 18px;border-radius:0 var(--radius) var(--radius) 0;margin-bottom:32px;font-size:0.82rem;color:var(--charcoal-light);">
+        <strong style="color:var(--charcoal);">Affiliate Disclosure:</strong> This post contains affiliate links. If you sign up through my link, I earn a small commission at no extra cost to you. I only recommend things I personally use and believe in.
+      </div>
+      <div class="post-full-content">
+        <p>For most of my adult life, I approached my health the same way most people do. I waited until something felt wrong. Then I made an appointment, described my symptoms, and hoped someone could figure out what was going on.</p>
+        <p>It worked, in a sense. I stayed alive. I managed problems as they came up. But I never really understood what was happening inside my body. I was guessing. And I didn't even realize how much I was guessing until I stopped.</p>
+
+        <h2>The Problem With Waiting for Symptoms</h2>
+        <p>Here's the thing about symptoms. By the time you feel them, something has already gone wrong.</p>
+        <p>A headache means dehydration already happened. Fatigue means something is already off. That nagging feeling in your gut means your body has been trying to tell you something for a while.</p>
+        <p>I spent years reacting. I'd feel tired, so I'd drink more coffee. I'd feel sluggish, so I'd try a new diet. None of it was based on anything real. It was all based on how I felt in the moment and whatever wellness trend happened to cross my feed that week.</p>
+        <blockquote>I wasn't managing my health. I was chasing symptoms and hoping for the best.</blockquote>
+
+        <h2>I Wanted Data, Not Guesses</h2>
+        <p>At some point, I got tired of the guessing game. I run a business. I make decisions based on data every single day. I look at numbers, spot patterns, and adjust my strategy accordingly.</p>
+        <p>Why wasn't I doing the same thing with my health?</p>
+        <p>The annual physical I'd been getting for years tested maybe 20 or 30 markers. My doctor would tell me everything looked fine, and I'd go home assuming I was healthy. But "fine" is a low bar. And 20 markers is a small window into a very complex system.</p>
+        <p>That's when I found Function Health.</p>
+
+        <h2>Understanding Biomarkers, Not Trends</h2>
+        <p>What drew me to Function wasn't the promise of better health. It was the promise of better information. They test over 100 biomarkers — significantly more than a standard physical — and they do it twice a year, so you can see how things change over time.</p>
+        <p>This matters more than I initially realized. A single snapshot of your health doesn't tell you much. But when you test regularly, you start to see patterns. You notice when something is trending in the wrong direction before it becomes a problem.</p>
+
+        <h2>The Shift From Reactive to Proactive</h2>
+        <p>Before I had this information, I was reactive. Something would feel off, and I'd try to fix it. Now, I'm proactive. I see what's happening before I feel it.</p>
+        <p>I stopped making health decisions based on how I felt on any given Tuesday. I started making them based on what the data actually showed. Some of my assumptions were confirmed. Others were completely wrong.</p>
+        <blockquote>There's a low-grade anxiety that comes with not knowing. When you have real data, that anxiety quiets down. I know where I stand. I know what to watch. That clarity is worth more than I expected.</blockquote>
+
+        <h2>Better Information, Better Decisions</h2>
+        <p>The quality of your decisions is directly tied to the quality of your information. This is true in business, in relationships, in life. When you're guessing, you're gambling. When you have real data, you can be strategic.</p>
+        <p>I'm not chasing perfect health. I'm not trying to optimize every metric or live forever. I just want to make informed decisions — and Function gave me that.</p>
+        <div style="text-align:center;margin:40px 0;">
+          <a href="https://my.functionhealth.com/signup?code=RPERRY29&_saasquatch=RPERRY29" target="_blank" class="btn btn-gold" style="font-size:1rem;padding:16px 36px;">Learn More & Sign Up with My Link →</a>
+        </div>
+      </div>
+      <div class="post-full-share">
+        <span class="share-label">Share</span>
+        <button class="share-btn">f</button><button class="share-btn">𝕏</button>
+        <button class="share-btn">P</button><button class="share-btn" onclick="copyLink()">🔗</button>
+      </div>
+      <div class="post-full-nl">
+        <div class="section-label" style="display:block;text-align:center;margin-bottom:8px;">Community</div>
+        <h3>Want more recommendations like this?</h3>
+        <p>Join Rachel's community for trusted picks, real stories, and weekly insights.</p>
+        <div class="post-full-nl-row">
+          <input class="nl-input" type="email" placeholder="Your email" style="flex:1;border-radius:50px;">
+          <button class="btn btn-gold" onclick="handleSubscribe()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REC POST: PVOLVE -->
+<div class="page" id="page-post-pvolve">
+  <div class="post-page-full">
+    <div class="post-hero">
+      <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1400&q=80" alt="PVOLVE Fitness">
+      <div class="post-hero-content">
+        <div class="post-meta-bar">
+          <span class="badge badge-gold">Fitness</span>
+          <span class="affiliate-badge" style="background:rgba(200,169,106,0.2);color:var(--gold-light);padding:4px 10px;border-radius:3px;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(200,169,106,0.4);">Affiliate</span>
+        </div>
+        <h1>PVOLVE: Strength That Finally Makes Sense</h1>
+      </div>
+    </div>
+    <div class="post-full-body">
+      <a href="#" class="post-back-btn" onclick="showPage('recommendations')">← Back to Recommendations</a>
+      <div class="post-author">
+        <div class="post-author-img"><img src="images/rachel-avatar.jpg" alt="Rachel"></div>
+        <div>
+          <div class="post-author-name">Rachel</div>
+          <div class="post-author-bio">Coach · Athlete · Wife · Mother of Twins</div>
+        </div>
+      </div>
+      <div style="background:var(--beige);border-left:3px solid var(--gold);padding:12px 18px;border-radius:0 var(--radius) var(--radius) 0;margin-bottom:32px;font-size:0.82rem;color:var(--charcoal-light);">
+        <strong style="color:var(--charcoal);">Affiliate Disclosure:</strong> This post contains affiliate links. If you sign up through my link, I earn a small commission at no extra cost to you. I only recommend things I personally use and believe in.
+      </div>
+      <div class="post-full-content">
+        <p>Let me start by saying this: I was a <strong>barre junkie</strong>. Full stop. I loved everything about it — the burn, the control, the shake-you-to-your-core kind of strength. I swore nothing could ever top it. (No offense, barre — you'll always have a place in my heart.)</p>
+        <p>But then I found <strong>PVOLVE</strong> — and it completely changed how I move.</p>
+        <p>I've always struggled with <strong>balance</strong> — in workouts and, honestly, in life. I wanted something that made me strong without beating me up. Something that didn't leave my hips screaming after leg day or my joints staging a rebellion. PVOLVE hit that sweet spot.</p>
+        <blockquote>It's low-impact, functional, and ridiculously effective. Every movement has a purpose. You build strength from the inside out — and instead of just looking toned, you actually <em>move</em> better.</blockquote>
+        <p>My posture improved, my balance finally stopped betraying me, and my runs feel stronger and smoother than ever.</p>
+
+        <h2>Why I Love It</h2>
+        <p>Smart, controlled movements that <em>teach</em> your body to move better. Real strength without joint pain or burnout. A perfect complement to running — it improves endurance and stability in ways I didn't expect.</p>
+        <p>The classes are challenging without being punishing. You finish and think: <em>"Why wasn't I doing this all along?"</em></p>
+        <p>PVOLVE gave me the kind of balance I didn't realize I'd lost. It makes me feel strong, centered, and capable — not just in the gym, but in everything else I do.</p>
+
+        <h2>Who It's For</h2>
+        <p>Whether you're a runner wanting to improve your form, a mom who needs something sustainable and effective, or someone who's tired of workouts that leave you broken — PVOLVE is worth trying. It meets you where you are and builds from there.</p>
+        <div style="text-align:center;margin:40px 0;">
+          <a href="https://pvolve.refr.cc/refer-a-friend/u/rachperry?s=sp&t=cp" target="_blank" class="btn btn-gold" style="font-size:1rem;padding:16px 36px;">Try PVOLVE with My Link →</a>
+        </div>
+      </div>
+      <div class="post-full-share">
+        <span class="share-label">Share</span>
+        <button class="share-btn">f</button><button class="share-btn">𝕏</button>
+        <button class="share-btn">P</button><button class="share-btn" onclick="copyLink()">🔗</button>
+      </div>
+      <div class="post-full-nl">
+        <div class="section-label" style="display:block;text-align:center;margin-bottom:8px;">Community</div>
+        <h3>Want more recommendations like this?</h3>
+        <p>Join Rachel's community for trusted picks, real stories, and weekly insights.</p>
+        <div class="post-full-nl-row">
+          <input class="nl-input" type="email" placeholder="Your email" style="flex:1;border-radius:50px;">
+          <button class="btn btn-gold" onclick="handleSubscribe()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REC POST: Ketone-IQ -->
+<div class="page" id="page-post-ketone">
+  <div class="post-page-full">
+    <div class="post-hero">
+      <img src="images/rachel-athletics.jpg" alt="Ketone-IQ">
+      <div class="post-hero-content">
+        <div class="post-meta-bar">
+          <span class="badge" style="background:var(--sage-light);color:white;border-color:var(--sage-light);">Daily Energy</span>
+          <span class="affiliate-badge" style="background:rgba(200,169,106,0.2);color:var(--gold-light);padding:4px 10px;border-radius:3px;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(200,169,106,0.4);">Affiliate</span>
+        </div>
+        <h1>What Helps Rachel Get Through the Day</h1>
+      </div>
+    </div>
+    <div class="post-full-body">
+      <a href="#" class="post-back-btn" onclick="showPage('recommendations')">← Back to Recommendations</a>
+      <div class="post-author">
+        <div class="post-author-img"><img src="images/rachel-avatar.jpg" alt="Rachel"></div>
+        <div>
+          <div class="post-author-name">Rachel</div>
+          <div class="post-author-bio">Coach · Athlete · Wife · Mother of Twins</div>
+        </div>
+      </div>
+      <div style="background:var(--beige);border-left:3px solid var(--gold);padding:12px 18px;border-radius:0 var(--radius) var(--radius) 0;margin-bottom:32px;font-size:0.82rem;color:var(--charcoal-light);">
+        <strong style="color:var(--charcoal);">Affiliate Disclosure:</strong> This post contains affiliate links. If you purchase through my link, I earn a small commission at no extra cost to you. I only recommend things I personally use and believe in.
+      </div>
+      <div class="post-full-content">
+        <p>As a valued partner and advocate for Ketones, I'm excited to share the transformative power of this supplement. It has not only enhanced my physical performance but also sharpened my mental focus — empowering me to tackle daily challenges with clarity and energy.</p>
+
+        <h2>What Are Ketones?</h2>
+        <p>Ketones are high-energy molecules produced by the body when it burns fat for fuel. Supplementing with ketones can help boost energy levels, enhance mental clarity, support weight management, and improve athletic performance.</p>
+
+        <h2>The Focus Factor</h2>
+        <p>Ketone-IQ is more than just a sports performance supplement. It's a mental clarity catalyst that helps you stay focused, driven, and productive. Whether you're a busy parent juggling family and work, a professional athlete seeking a competitive edge, or an entrepreneur striving to stay sharp — it delivers the cognitive boost you need.</p>
+        <blockquote>Overcome brain fog and fatigue. Enhance concentration and mental clarity. Improve reaction time and decision-making. Boost motivation and confidence.</blockquote>
+
+        <h2>Sports Performance Benefits</h2>
+        <p>Ketone-IQ also delivers exceptional physical benefits. Increased endurance and stamina. Enhanced recovery and reduced muscle soreness. Improved power and speed. Whether I'm heading into a coaching session, a run, or school pickup — this is part of how I show up ready.</p>
+
+        <h2>Real Results — My Experience</h2>
+        <p>In my own experience, Ketone-IQ has been a game-changer. I've noticed improved mental focus and clarity throughout the day, enhanced physical performance during workouts, reduced fatigue and brain fog, and increased motivation and confidence.</p>
+        <p>It's not just a sports supplement. It's a tool for anyone who needs to bring their best self to a full day. That's my life — and this fits it perfectly.</p>
+        <div style="text-align:center;margin:40px 0;">
+          <a href="https://ketone.com/rach" target="_blank" class="btn btn-gold" style="font-size:1rem;padding:16px 36px;">Try Ketone-IQ with My Link →</a>
+        </div>
+      </div>
+      <div class="post-full-share">
+        <span class="share-label">Share</span>
+        <button class="share-btn">f</button><button class="share-btn">𝕏</button>
+        <button class="share-btn">P</button><button class="share-btn" onclick="copyLink()">🔗</button>
+      </div>
+      <div class="post-full-nl">
+        <div class="section-label" style="display:block;text-align:center;margin-bottom:8px;">Community</div>
+        <h3>Want more recommendations like this?</h3>
+        <p>Join Rachel's community for trusted picks, real stories, and weekly insights.</p>
+        <div class="post-full-nl-row">
+          <input class="nl-input" type="email" placeholder="Your email" style="flex:1;border-radius:50px;">
+          <button class="btn btn-gold" onclick="handleSubscribe()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <footer id="footer">
   <div class="container">
     <div class="footer-grid">
