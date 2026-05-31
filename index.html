@@ -312,15 +312,23 @@ p { font-size: 1rem; color: var(--charcoal-light); }
   background: var(--beige);
   padding: 120px 0 60px;
 }
-.hero-bg {
+.hero-slideshow {
   position: absolute;
   inset: 0;
-  background: url('images/rachel-hero.jpg') center/cover no-repeat;
-  filter: brightness(0.42);
-  transform: scale(1.05);
-  transition: transform 8s ease;
+  z-index: 0;
 }
-#hero.loaded .hero-bg { transform: scale(1); }
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  filter: brightness(0.42);
+  transition: opacity 1.5s ease-in-out;
+}
+.hero-slide.active {
+  opacity: 1;
+}
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -1434,7 +1442,15 @@ p { font-size: 1rem; color: var(--charcoal-light); }
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-bg"></div>
+    <div class="hero-slideshow">
+      <div class="hero-slide active" style="background-image: url('images/rachel-hero.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('images/rachel-athletics.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('images/rachel-about.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('images/rachel-coaching.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('images/rachel-who-she-is.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('images/rachel-mom.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('images/rachel-wellness.jpg')"></div>
+    </div>
     <div class="hero-overlay"></div>
     <div class="hero-shapes">
       <div class="hero-shape"></div>
@@ -3065,8 +3081,8 @@ function initReveal() {
 }
 document.addEventListener('DOMContentLoaded', () => {
   initReveal();
-  // Hero image entrance
-  setTimeout(() => document.getElementById('hero').classList.add('loaded'), 100);
+  // Hero slideshow
+  startHeroSlideshow();
 });
 
 // ============================================================
@@ -3132,6 +3148,29 @@ if ('IntersectionObserver' in window) {
   });
   document.querySelectorAll('img[loading="lazy"]').forEach(img => imgObserver.observe(img));
 }
+
+// ============================================================
+// HERO SLIDESHOW
+// ============================================================
+function startHeroSlideshow() {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (!slides.length) return;
+  let current = 0;
+
+  // Preload all images
+  slides.forEach(slide => {
+    const url = slide.style.backgroundImage.replace(/url\(['"](.*?)['"]\)/, '$1');
+    const img = new Image();
+    img.src = url;
+  });
+
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 5000); // change every 5 seconds
+}
+
 </script>
 </body>
 </html>
