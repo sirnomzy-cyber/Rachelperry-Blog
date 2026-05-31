@@ -82,7 +82,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
    UTILITY CLASSES
    ============================================================ */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-#hero .container { padding-left: 48px; }
+#hero .container { max-width: 100%; padding-left: 60px; padding-right: 60px; margin: 0; }
 .section { padding: 100px 0; }
 .section-sm { padding: 60px 0; }
 
@@ -315,7 +315,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1600&q=80') center/cover no-repeat;
+  background: url('images/rachel-hero.jpg') center/cover no-repeat;
   filter: brightness(0.42);
   transform: scale(1.05);
   transition: transform 8s ease;
@@ -1304,7 +1304,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
     <div class="container">
       <div class="about-grid">
         <div class="about-img-wrap reveal">
-          <img class="about-img" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80" alt="Rachel — Coach, Athlete, Mother">
+          <img class="about-img" src="images/rachel-about.jpg" alt="Rachel — Coach, Athlete, Mother">
         </div>
         <div class="reveal reveal-delay-2">
           <div class="section-label">Meet Rachel</div>
@@ -1359,7 +1359,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
       <div class="rec-grid">
         <div class="rec-card reveal">
           <div class="rec-card-img">
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Morning Planner" loading="lazy">
+            <img src="images/rachel-who-she-is.jpg" alt="Rachel recommends morning planner" loading="lazy">
           </div>
           <div class="rec-card-body">
             <div class="rec-card-meta">
@@ -1373,7 +1373,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
         </div>
         <div class="rec-card reveal reveal-delay-1">
           <div class="rec-card-img">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Fitness Tool" loading="lazy">
+            <img src="images/rachel-athletics.jpg" alt="Rachel fitness tool" loading="lazy">
           </div>
           <div class="rec-card-body">
             <div class="rec-card-meta">
@@ -1387,7 +1387,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
         </div>
         <div class="rec-card reveal reveal-delay-2">
           <div class="rec-card-img">
-            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="Wellness Product" loading="lazy">
+            <img src="images/rachel-wellness.jpg" alt="Rachel wellness product" loading="lazy">
           </div>
           <div class="rec-card-body">
             <div class="rec-card-meta">
@@ -1418,7 +1418,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
       <div class="writing-grid">
         <div class="writing-card reveal">
           <div class="writing-card-img">
-            <img src="https://images.unsplash.com/photo-1518818419601-72c8673f5852?w=400&q=80" alt="Motherhood" loading="lazy">
+            <img src="images/rachel-mom.jpg" alt="Motherhood" loading="lazy">
           </div>
           <div class="writing-card-body">
             <div class="writing-card-meta">
@@ -1446,7 +1446,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
         </div>
         <div class="writing-card reveal">
           <div class="writing-card-img">
-            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=400&q=80" alt="Athletics" loading="lazy">
+            <img src="images/rachel-athletics.jpg" alt="Athletics" loading="lazy">
           </div>
           <div class="writing-card-body">
             <div class="writing-card-meta">
@@ -1460,7 +1460,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
         </div>
         <div class="writing-card reveal reveal-delay-1">
           <div class="writing-card-img">
-            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&q=80" alt="Family Balance" loading="lazy">
+            <img src="images/rachel-about.jpg" alt="Family Balance" loading="lazy">
           </div>
           <div class="writing-card-body">
             <div class="writing-card-meta">
@@ -1574,7 +1574,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
     <div class="container">
 
       <div class="story-block reveal">
-        <img class="story-img" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=700&q=80" alt="Rachel Portrait">
+        <img class="story-img" src="images/rachel-who-she-is.jpg" alt="Rachel Portrait">
         <div class="story-text">
           <div class="story-label">Who She Is</div>
           <h3>Real Life. Real Lessons. Real Recommendations.</h3>
@@ -1585,7 +1585,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
       </div>
 
       <div class="story-block reverse reveal">
-        <img class="story-img" src="https://images.unsplash.com/photo-1518818419601-72c8673f5852?w=700&q=80" alt="Rachel with family">
+        <img class="story-img" src="images/rachel-mom.jpg" alt="Rachel with family">
         <div class="story-text">
           <div class="story-label">Life As A Mom</div>
           <h3>Motherhood Changed Everything I Thought I Knew.</h3>
@@ -1595,7 +1595,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
       </div>
 
       <div class="story-block reveal">
-        <img class="story-img" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=700&q=80" alt="Rachel Coaching">
+        <img class="story-img" src="images/rachel-coaching.jpg" alt="Rachel Coaching">
         <div class="story-text">
           <div class="story-label">Her Coaching Journey</div>
           <h3>8 Years of Helping People Live with Intention.</h3>
@@ -1605,7 +1605,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
       </div>
 
       <div class="story-block reverse reveal">
-        <img class="story-img" src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=700&q=80" alt="Rachel Running">
+        <img class="story-img" src="images/rachel-athletics.jpg" alt="Rachel Athletics">
         <div class="story-text">
           <div class="story-label">Athletics & Growth</div>
           <h3>Running Taught Me More Than Any Book Ever Did.</h3>
@@ -1615,7 +1615,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
       </div>
 
       <div class="story-block reveal">
-        <img class="story-img" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=80" alt="Rachel Family">
+        <img class="story-img" src="images/rachel-about.jpg" alt="Rachel Family">
         <div class="story-text">
           <div class="story-label">Family Values</div>
           <h3>Everything I Do Comes Back To Family.</h3>
@@ -1711,7 +1711,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
 
       <div class="rec-article reveal">
         <div class="rec-article-img">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80" alt="Morning Planner" loading="lazy">
+          <img src="images/rachel-who-she-is.jpg" alt="Rachel recommends morning planner" loading="lazy">
         </div>
         <div class="rec-article-body">
           <div class="section-label">Productivity</div>
@@ -1745,13 +1745,13 @@ p { font-size: 1rem; color: var(--charcoal-light); }
           <div class="affiliate-notice">Affiliate link: Rachel earns a small commission if you purchase. Her recommendation is genuine and unsponsored.</div>
         </div>
         <div class="rec-article-img">
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&q=80" alt="Fitness Tool" loading="lazy">
+          <img src="images/rachel-athletics.jpg" alt="Rachel fitness tool" loading="lazy">
         </div>
       </div>
 
       <div class="rec-article reveal">
         <div class="rec-article-img">
-          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=700&q=80" alt="Wellness Product" loading="lazy">
+          <img src="images/rachel-wellness.jpg" alt="Rachel recommends wellness product" loading="lazy">
         </div>
         <div class="rec-article-body">
           <div class="section-label">Wellness</div>
@@ -1806,7 +1806,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
       <div class="blog-grid" id="blogGrid">
 
         <div class="blog-card reveal" data-category="motherhood" data-title="What Motherhood Taught Me About Patience">
-          <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1518818419601-72c8673f5852?w=500&q=80" alt="Motherhood" loading="lazy"></div>
+          <div class="blog-card-img"><img src="images/rachel-mom.jpg" alt="Motherhood" loading="lazy"></div>
           <div class="blog-card-body">
             <div class="blog-card-meta"><span class="badge">Motherhood</span><span class="blog-date">May 12, 2025</span><span class="reading-time">⏱ 5 min</span></div>
             <h4 class="blog-card-title">What Motherhood Taught Me About Patience</h4>
@@ -1826,7 +1826,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
         </div>
 
         <div class="blog-card reveal reveal-delay-2" data-category="athletics" data-title="Lessons From Training As An Athlete">
-          <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=500&q=80" alt="Athletics" loading="lazy"></div>
+          <div class="blog-card-img"><img src="images/rachel-athletics.jpg" alt="Athletics" loading="lazy"></div>
           <div class="blog-card-body">
             <div class="blog-card-meta"><span class="badge">Athletics</span><span class="blog-date">Apr 10, 2025</span><span class="reading-time">⏱ 6 min</span></div>
             <h4 class="blog-card-title">Lessons From Training As An Athlete</h4>
@@ -1836,7 +1836,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
         </div>
 
         <div class="blog-card reveal" data-category="family" data-title="Finding Balance Between Family And Ambition">
-          <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&q=80" alt="Family" loading="lazy"></div>
+          <div class="blog-card-img"><img src="images/rachel-about.jpg" alt="Family" loading="lazy"></div>
           <div class="blog-card-body">
             <div class="blog-card-meta"><span class="badge">Family</span><span class="blog-date">Mar 22, 2025</span><span class="reading-time">⏱ 7 min</span></div>
             <h4 class="blog-card-title">Finding Balance Between Family And Ambition</h4>
@@ -1846,7 +1846,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
         </div>
 
         <div class="blog-card reveal reveal-delay-1" data-category="coaching" data-title="The One Thing I Tell Every Coaching Client">
-          <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&q=80" alt="Coaching" loading="lazy"></div>
+          <div class="blog-card-img"><img src="images/rachel-coaching.jpg" alt="Coaching" loading="lazy"></div>
           <div class="blog-card-body">
             <div class="blog-card-meta"><span class="badge">Coaching</span><span class="blog-date">Mar 5, 2025</span><span class="reading-time">⏱ 5 min</span></div>
             <h4 class="blog-card-title">The One Thing I Tell Every Coaching Client</h4>
@@ -1907,7 +1907,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
 <div class="page" id="page-post">
   <div class="post-page">
     <div class="post-hero">
-      <img class="post-hero-img" src="https://images.unsplash.com/photo-1518818419601-72c8673f5852?w=1400&q=80" alt="Blog Post">
+      <img class="post-hero-img" src="images/rachel-hero.jpg" alt="Blog Post">
       <div class="post-hero-content">
         <div class="post-meta">
           <span class="badge">Motherhood</span>
@@ -1921,7 +1921,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
     <div class="post-body">
       <div class="post-author">
         <div class="post-author-img">
-          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=80" alt="Rachel">
+          <img src="images/rachel-avatar.jpg" alt="Rachel">
         </div>
         <div>
           <div class="post-author-name">Rachel</div>
@@ -1995,7 +1995,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
           </div>
           <div class="blog-card reveal reveal-delay-1">
-            <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&q=80" alt="Family" loading="lazy"></div>
+            <div class="blog-card-img"><img src="images/rachel-about.jpg" alt="Family" loading="lazy"></div>
             <div class="blog-card-body">
               <div class="blog-card-meta"><span class="badge">Family</span></div>
               <h4 class="blog-card-title">Finding Balance Between Family And Ambition</h4>
