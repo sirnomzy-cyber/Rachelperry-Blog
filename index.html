@@ -920,6 +920,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
   flex-shrink: 0;
   text-align: right;
 }
+.timeline-year-mobile { display: none; }
 .timeline-item:nth-child(even) .timeline-year { text-align: left; }
 .timeline-dot {
   position: absolute;
@@ -1222,10 +1223,42 @@ p { font-size: 1rem; color: var(--charcoal-light); }
   .related-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-  .timeline-inner::before { left: 20px; }
-  .timeline-item, .timeline-item:nth-child(even) { flex-direction: column; text-align: left; }
-  .timeline-dot { left: 20px; }
-  .timeline-year { width: auto; text-align: left; }
+  .timeline-year-mobile {
+    display: inline;
+    font-family: var(--serif);
+    color: var(--gold);
+    opacity: 0.85;
+    font-size: 1rem;
+  }
+  /* Timeline mobile — line on far left, dot on line, content to the right */
+  .timeline-inner::before { left: 16px; transform: none; }
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    flex-direction: row;
+    text-align: left;
+    gap: 0;
+    padding-left: 44px;
+    position: relative;
+  }
+  .timeline-dot {
+    left: 12px;
+    top: 10px;
+    transform: none;
+  }
+  .timeline-year {
+    display: none; /* hide the large year — we'll show it inside content */
+  }
+  .timeline-item:nth-child(even) { flex-direction: row; }
+  .timeline-item:nth-child(even) .timeline-year { text-align: left; }
+  .timeline-content { flex: 1; }
+  .timeline-content h4::before {
+    display: block;
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--gold);
+    opacity: 0.7;
+    margin-bottom: 4px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1744,7 +1777,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
           <div class="timeline-year">Early</div>
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h4>Growing Up in New York</h4>
+            <h4><span class="timeline-year-mobile">Early — </span>Growing Up in New York</h4>
             <p>Raised in a financially strained household, I developed a deep desire for a different kind of life — one I would have to build myself.</p>
           </div>
         </div>
@@ -1752,7 +1785,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
           <div class="timeline-year">21</div>
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h4>Left New York for North Carolina</h4>
+            <h4><span class="timeline-year-mobile">21 — </span>Left New York for North Carolina</h4>
             <p>A mistakenly dialed phone call led to an unexpected job offer — and the start of a new chapter far from everything I'd known.</p>
           </div>
         </div>
@@ -1760,7 +1793,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
           <div class="timeline-year">2013</div>
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h4>Met My Husband Mike</h4>
+            <h4><span class="timeline-year-mobile">2013 — </span>Met My Husband Mike</h4>
             <p>The direction of my life changed profoundly. Mike became my partner, my anchor, and my greatest supporter.</p>
           </div>
         </div>
@@ -1768,7 +1801,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
           <div class="timeline-year">2016</div>
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h4>Twin Girls Arrive</h4>
+            <h4><span class="timeline-year-mobile">2016 — </span>Twin Girls Arrive</h4>
             <p>Our joy doubled. Becoming a mother of twins reshaped everything — my priorities, my ambitions, and my definition of success.</p>
           </div>
         </div>
@@ -1776,7 +1809,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
           <div class="timeline-year">2022</div>
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h4>Laid Off — and Set Free</h4>
+            <h4><span class="timeline-year-mobile">2022 — </span>Laid Off — and Set Free</h4>
             <p>The pandemic brought a layoff that felt devastating at first. It turned out to be the catalyst that gave me the freedom to finally pursue my true passion.</p>
           </div>
         </div>
@@ -1784,7 +1817,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
           <div class="timeline-year">Today</div>
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h4>Living the Dream — For Real</h4>
+            <h4><span class="timeline-year-mobile">Today — </span>Living the Dream — For Real</h4>
             <p>Working from our forever home, coaching others, raising two incredible girls, and sharing the real story — not the highlight reel.</p>
           </div>
         </div>
