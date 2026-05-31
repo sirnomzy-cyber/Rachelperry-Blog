@@ -1518,7 +1518,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h3 class="writing-card-title">Are You as Safe as You Think?</h3>
             <p class="writing-card-excerpt">I was the top earner. Multiple Presidents Club winner. Then I got laid off. That final layoff was the last time I was willing to build my life on something I didn't control.</p>
-            <a href="#" class="read-more" onclick="showPage('page-post-safe')"">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-safe')">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
         <div class="writing-card reveal reveal-delay-1">
@@ -1532,7 +1532,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h3 class="writing-card-title">Enough Was Enough</h3>
             <p class="writing-card-excerpt">Growing up, money was a constant weight. I watched my mom quietly remove items from the cart because the total was too high. I promised myself my past would not dictate my future.</p>
-            <a href="#" class="read-more" onclick="showPage('page-post-enough')"">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-enough')">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
         <div class="writing-card reveal">
@@ -1546,7 +1546,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h3 class="writing-card-title">From Victim to Victor</h3>
             <p class="writing-card-excerpt">"How am I going to tell my husband?" We were finally climbing out of a dark financial hole — and then, just like that, it was gone. What happened next surprised me most.</p>
-            <a href="#" class="read-more" onclick="showPage('page-post-victor')"">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-victor')">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
         <div class="writing-card reveal reveal-delay-1">
@@ -1560,7 +1560,7 @@ p { font-size: 1rem; color: var(--charcoal-light); }
             </div>
             <h3 class="writing-card-title">This Might Just Change Everything</h3>
             <p class="writing-card-excerpt">"I'm working 12-hour days, barely making ends meet." A friend called me in tears. I'd been in her exact shoes. Here's what I told her — and what I wish I'd known sooner.</p>
-            <a href="#" class="read-more" onclick="showPage('page-post-change')"">Read More <span class="read-more-arrow">→</span></a>
+            <a href="#" class="read-more" onclick="showPage('page-post-change')">Read More <span class="read-more-arrow">→</span></a>
           </div>
         </div>
       </div>
@@ -2938,13 +2938,13 @@ p { font-size: 1rem; color: var(--charcoal-light); }
 // ============================================================
 function showPage(page) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  const target = document.getElementById('page-' + page);
+  // Support both 'home' (prepend 'page-') and 'page-post-safe' (use as-is)
+  const id = page.startsWith('page-') ? page : 'page-' + page;
+  const target = document.getElementById(id);
   if (target) {
     target.classList.add('active');
-    // Append footer
     document.getElementById('footer').style.display = '';
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // Re-run scroll reveal
     setTimeout(initReveal, 100);
   }
 }
