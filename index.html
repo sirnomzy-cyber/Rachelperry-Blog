@@ -317,6 +317,9 @@ p { font-size: 1rem; color: var(--charcoal-light); }
   inset: 0;
   z-index: 0;
 }
+@media (max-width: 768px) {
+  .hero-slide:not(.active) { display: none; }
+}
 .hero-slide {
   position: absolute;
   inset: 0;
@@ -1443,9 +1446,11 @@ p { font-size: 1rem; color: var(--charcoal-light); }
   <!-- HERO -->
   <section id="hero">
     <div class="hero-slideshow">
-      <div class="hero-slide active" style="background-image: url('images/rachel-hero.jpg?v=3')"></div>
-      <div class="hero-slide" style="background-image: url('images/rachel-athletics.jpg?v=3')"></div>
-      <div class="hero-slide" style="background-image: url('images/rachel-mom.jpg?v=3')"></div>
+      <div class="hero-slide active" style="background-image: url('images/rachel-about.jpg?v=4')"></div>
+      <div class="hero-slide" style="background-image: url('images/rachel-athletics.jpg?v=4')"></div>
+      <div class="hero-slide" style="background-image: url('images/rachel-avatar.jpg?v=4')"></div>
+      <div class="hero-slide" style="background-image: url('images/rachel-hero.jpg?v=4')"></div>
+      <div class="hero-slide" style="background-image: url('images/rachel-mom.jpg?v=4')"></div>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-shapes">
